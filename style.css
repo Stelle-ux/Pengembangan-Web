@@ -303,6 +303,8 @@ nav ul li a:hover {
 }
 .portofolio-projects .project h3 {
     margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .portofolio-projects .project h3 a{
