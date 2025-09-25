@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="interest.html">Interests</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portofolio.html">Portofolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contact-section">
+        <h2>Contact Me</h2>
+
+        <form id="userForm">
+            <div>
+                <label>Nama :</label>
+                <input id="nama" type="text" placeholder="Nama" />
+            </div>
+            <div>
+                <label>Email :</label>
+                <input id="email" type="email" placeholder="Email" />
+            </div>
+            <div>
+                <label>Jenis Kelamin :</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Laki-Laki"> Laki-Laki</label>
+                    <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+                </div>
+            </div>
+            <div>
+                <label>Pesan :</label>
+                <textarea id="pesan" placeholder="Pesan"></textarea>
+            </div>
+            <button id="submitBtn" type="submit">Submit</button>
+        </form>
+    </section>
+
+    <div class="user-info">
+        <p><strong>Nama :</strong> <span id="info-nama"></span></p>
+        <p><strong>Email :</strong> <span id="info-email"></span></p>
+        <p><strong>Jenis Kelamin :</strong> <span id="info-gender"></span></p>
+        <p><strong>Pesan :</strong> <span id="info-pesan"></span></p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 My Profile Website</p>
+    </footer>
+
+    <div class="popup" id="contact-popup">
+        <div class="popup-content-message">
+            <h2>Thank You!</h2>
+            <p>Your message has been sent successfully.</p>
+            <button id="close-popup">Close</button>
+        </div>
+    </div>
+
+    <script src="JS/contact.js"></script>
+</body>
+
+</html>

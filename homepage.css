@@ -1,0 +1,355 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    background-color: #111;
+    font-family: Arial, sans-serif, Helvetica;
+    line-height: 1.6;
+    color: #f5f5f5;
+}
+
+/* Header - Applied to all headers */
+header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 3.5%;
+}
+
+
+/* Navbar */
+nav {
+    padding: 1rem 2rem;
+    display: flex;
+    position: fixed;
+    justify-content: right;
+    align-items: flex-start;
+    text-align: right;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #00000069;
+    backdrop-filter: blur(7px);
+}
+
+/* Current time */
+.current-time {
+    color: #ffffff;
+    font-size: 18px;
+    display: flex;
+    gap: 0.5rem;
+    font-weight: bold;
+    justify-content: flex-start;
+}
+
+/* Menu */
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.7s;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: rgb(255, 255, 255);
+    color: #000000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* Greeting styles */
+#greeting {
+    color: #ffffff;
+}
+
+#user-name {
+    color: #ff3e3e;
+}
+
+/* Hero Section */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.hero-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.hero-text h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 20px;
+}
+
+/* Profile Section */
+.profile {
+    max-width: auto;
+    margin: 20px;
+    margin-top: 40px;
+    padding: 25px;
+    background: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    margin-right: 20%;
+    margin-left: 20%;
+    opacity: 0;
+    transform: translateY(-80px);
+    animation: fadeDown 2s ease-in-out forwards;
+}
+
+@keyframes fadeDown {
+    90% {
+        opacity: 1;
+        transform: translateY(2%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile h2 {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 1px;
+    border-left: 4px solid #fc5d5dba;
+    padding-left: 15px;
+}
+
+#name {
+    color: #ff5252;
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.profile p {
+    color: white;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+.tech-icons {
+    text-align: center;
+
+}
+
+.tech-icons i {
+    font-size: 50px;
+    margin: 10px;
+    color: #00aeff;
+    transition: transform 0.3s, color 0.3s;
+    animation: moverighttoLeft;
+}
+
+.tech-icons i:hover {
+    transform: scale(1.5);
+    color: #ffffff;
+}
+
+.icon-track span {
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+}
+
+.icon-track span:nth-child(1) {
+    animation-delay: 0s;
+}
+.icon-track span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.icon-track span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.icon-track span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.icon-track span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+@keyframes wave {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.cta {
+    text-align: center;
+    margin: 50px 0;
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+    scale: 0;
+    filter: blur(5px);
+}
+
+@keyframes fadeIn {
+    90% {
+        opacity: 1;
+        scale: 1.2;
+        filter: blur(0);
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+        filter: blur(0);
+    }
+}
+
+
+.cta .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    background: #ff4343;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.cta .btn:hover {
+    background: #ff6565;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#edit-name {
+    background: transparent;
+    border: none;
+    color: #53d7ff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: left;
+    width: 1%;
+    height: 1%;
+}
+
+
+/* Footer */
+.footer {
+    background: #fd6767;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+}
+
+/* Popup Styles */
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.575);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content-input {
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 7px 12px rgba(73, 173, 255, 0.5);
+}
+
+.popup-content-input h2 {
+    color: #2fcfff;
+    margin-bottom: 2px;
+}
+
+.popup-content-input p {
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.popup-content-input input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.popup-content-input button {
+    padding: 6px 15px;
+    background: #0059ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.popup-content-input button:hover {
+    background: #47a6ff;
+    color: black;
+    box-shadow: 0 4px 12px rgba(7, 78, 136, 0.5);
+}

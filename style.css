@@ -1,0 +1,496 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    background-color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #f5f5f5;
+}
+
+header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 7%;
+}
+
+
+/* Navbar */
+nav {
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #00000069;
+    backdrop-filter: blur(7px);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    list-style: none;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.7s;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: white;
+    color: black;
+}
+
+/*.interest-section Page */
+/* Content Box */
+.interest-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.interest-section div  {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px  rgba(63, 63, 63, 0.6);
+    max-width: auto;
+    margin-bottom: 5%;
+    margin-right: 8%;
+    margin-left: 8%;
+    opacity: 0;
+    transform: translateY(30%);
+    animation: fadeUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        filter: blur(10px) drop-shadow(0 0 10px rgba(255, 255, 255, 0));;
+        transform: translateY(30%);
+    }
+
+    90% {
+        opacity: 1;
+        filter: blur(2px);
+        transform: translateY(-2%);
+        behavior: smooth;
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0);
+    }
+}
+
+/* Judul */
+#interest-title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2%;
+    color: #2fcfff;
+    opacity: 0;
+    animation: fadeDown 1s ease forwards;
+    filter: blur(2px);
+    transform: translateY(-50%);
+}
+
+@keyframes fadeDown {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.interest-section h2 {
+    color: #2fcfff;
+    font-size: 28px;
+    margin: 20px 0 10px;
+    border-left: 4px solid #2fcfff;
+    padding-left: 10px;
+}
+
+/* Paragraf */
+.interest-section p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.interest-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.interest-section ul li {
+    margin-bottom: 1rem;
+    margin-top: 4%;
+    margin-left: 2%;
+}
+
+/* About Section */
+.about-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    filter: blur(5px);
+}
+/* keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+/* hello */
+.about-section h3 {
+    color: #ff5252;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+/* teks */
+.about-section h4 {
+    color: #ff5252;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+/* judul */
+.about-section h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+}
+/* teks */
+.about-section p {
+    color: #ccc;
+    font-size: 18.75px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.about-section .desc {
+    text-align:center;
+}
+
+/* btn */
+.about-section .buttons {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/* btn */
+.about-section .buttons .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+    color: white;
+    background: #000;
+}
+/* btn */
+.about-section .buttons .btn:hover {
+    background: #ff5252;
+}
+/* img */
+.about-section .hero-image {
+    margin-top: 20px;
+}
+/* img */
+.about-section .hero-image img {
+    max-width: 50%;
+    border-radius: 100%;
+}
+
+/* Efek cursor */
+.typing {
+    border-right: 2px solid #ff5252;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Portofolio section */
+.portofolio-section {
+    max-width: auto;
+    margin: 2rem 2rem 1rem 2rem;
+    padding: 25px;
+    background: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Judul */
+.portofolio-section h2 {
+    color: #2fcfff;
+    font-size: 28px;
+    margin: 20px 0 10px;
+    border-left: 4px solid #2fcfff;
+    padding-left: 10px;
+}
+
+/* Paragraf */
+.portofolio-section p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.portofolio-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+/* Card Project */
+.project {
+    margin: 20px;
+    background-color: #154D71;
+    border: 0.5px solid rgba(255, 255, 255, 0.175) ;
+    border-radius: 8px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.4s ease, background 0.4s ease;
+}
+
+/* Hover effect */
+.project:hover {
+    transform: translateY(-5px);
+    background: #0a5c7f;
+}
+
+.project img {
+    margin-top: 20px;
+    width: 90%;
+    max-height: 250px;
+    border-radius: 5px;
+    justify-content: center;
+}
+.portofolio-projects .project h3 {
+    margin-top: 10px;
+}
+
+.portofolio-projects .project h3 a{
+    text-decoration: none;
+    color: white;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.portofolio-projects .project h3 a:hover {
+    color: #b4b4b4;
+}
+
+
+/* Contact Section */
+.contact-section {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 40px auto;
+    color: #f0f0f0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid #333;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+/* Form Labels */
+.contact-section label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+    color: #ddd;
+}
+
+/* Input & Textarea */
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #2a2a2a;
+    color: #f0f0f0;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+#userForm textarea{
+    height: 7rem;
+    resize: none;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: #6a5acd;
+    outline: none;
+    background: #333;
+    box-shadow: 0 0 8px rgba(106, 90, 205, 0.5);
+}
+
+/* Button */
+.contact-section button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #5a79cd, #6fadff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-section button:hover {
+    background: linear-gradient(135deg, #6fadff, #5a7ecd);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(67, 141, 238, 0.4);
+}
+
+/* Perbaikan layout radio button */
+.radio-group {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    align-items: start;
+    gap: 1rem;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    color: #ddd;
+    white-space: nowrap;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+    margin-bottom: 1px;
+}
+
+.user-info {
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 20px;
+    font-size: 14px;
+}
+
+/* Footer */
+.footer {
+    background: #062a66;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    margin-top: 100px;
+}
+
+/* popup */
+.popup {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+} 
+
+#contact-popup {
+    display: none;
+    /* default hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+
+    background: rgba(0, 0, 0, 0.765);
+    backdrop-filter: blur(5px);
+    padding: 100%;
+    border-radius: 12px;
+    min-width: 300px;
+    text-align: center;
+}
+
+.popup-content-message {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 400px;
+}
+
+.popup-content-message h2 {
+    margin: 10px;
+    color: #ffffff;
+}
+
+.popup-content-message p {
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.popup-content-message button {
+    background: #6a5acd;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.popup-content-message button:hover {
+    background: #836fff;
+}

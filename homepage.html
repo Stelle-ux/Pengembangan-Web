@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>HomePage</title>
+</head>
+<body class="main">
+    <header>
+        <!-- Navbar -->
+        <nav>
+            <div class="current-time">
+                    <p>Current Time:</p><span id="time"></span>
+                </div>
+            <ul>
+                
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="interest.html">Interests</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portofolio.html">Portofolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <img src="IMG/Hero.jpg" alt="Hero Image"/>
+                <div class="hero-text">
+                    
+                    <h1 id="greeting">Hi, <span id="user-name">User</span> Welcome to Axel website</h1> <!-- Greeting Message -->
+                    <p><blockquote>
+                        "Keep learning, keep growing, and stay curious."
+                    </blockquote></p>
+                    <button id="edit-name" title="Edit Name" class="cursor:pointer">✏️</button>
+                </div>
+            </div>
+        </section>
+        <section id="profile" class="profile">
+            <h2>Profile</h2>
+            <p id="name">Tyaga Axellatio Fathirizqi Apriyanto</p>
+            <p><strong>Software Engineer in training</strong></p>
+            <p>Saya adalah seorang pelajar di SMKN 1 Kota Bekasi yang sedang mendalami <strong>Frontend Development</strong>,
+            <strong>UI/UX Design</strong>, serta mulai mempelajari dasar-dasar <strong>database</strong>.
+            Ketertarikan saya pada dunia teknologi berawal dari rasa ingin tahu tentang bagaimana sebuah website dan aplikasi dapat
+            bekerja dengan baik serta memberikan pengalaman yang menyenangkan bagi penggunanya. <br><br>
+        </p>
+        </section>
+
+        <section class="cta">
+            <a href="portofolio.html" class="btn">🚀 View My Work</a>
+            <a href="contact.html" class="btn">📩 Get in Touch</a>
+        </section>
+
+        <section class="tech-icons">
+            <div class="icon-track">
+            <span class="icon"><i class="fa-brands fa-html5" title="HTML5"></i></span>
+            <span class="icon"><i class="fa-brands fa-css3-alt" title="CSS3"></i></span>
+            <span class="icon"><i class="fa-brands fa-js" title="JavaScript"></i></span>
+            <span class="icon"><i class="fa-brands fa-react" title="React"></i></span>
+            <span class="icon"><i class="fa-brands fa-git-alt" title="Git"></i></span>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 My Website</p>
+    </footer>
+
+    <div id="name-popup" class="popup">
+        <div class="popup-content-input">
+            <h2>Welcome!</h2>
+            <p>Please input your name to continue:</p>
+            <input type="text" id="name-input" placeholder="Your Name">
+            <button id="submit-name">OK</button>
+        </div>
+    </div>
+
+    <script src="JS/homepage.js"></script>
+</body>
+</html>
